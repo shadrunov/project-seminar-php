@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-function getInitials(string $FIO)
+function getInitials(string $FIO): string | null
 {   
     $FIO = trim($FIO);
 
