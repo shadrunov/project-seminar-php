@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-function getBMI(int $height, $weight)
+function getBMI(int $height, $weight): float | null
 {
     /* провека типов
         тип первого аргумента проверяется автоматически
