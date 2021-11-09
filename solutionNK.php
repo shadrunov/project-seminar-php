@@ -7,6 +7,11 @@ function getSumNK($input, int $N, int $K): int
 
     if ($N < 0 or $K < 0 or count($input) < $N + $K - 1)
         return -1;
+
+    foreach ($input as $value) {
+        if (!is_int($value))
+            return -1;
+    }
     
     if ($N == 0)
     {
@@ -19,11 +24,8 @@ function getSumNK($input, int $N, int $K): int
 
     $sliced = array_slice($input, $K - 1, $N);
     $sum = 0;
-    foreach ($sliced as $value) {
-        if (!is_int($value))
-            return -1;
+    foreach ($sliced as $value)
         $sum += $value;
-    }
     return $sum;
 }
 
