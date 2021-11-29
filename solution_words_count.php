@@ -107,11 +107,12 @@ function wordsCount(string $sourceString): array
 // print_r( wordsCount("Петров иван Иван иван") ) ;
 // print_r( wordsCount("Маркес Габриэль Хосе Гарсиа") ) ;
 // print_r( wordsCount("ale’x Alex baba Baba") ) ;
-print_r(wordsCount("Раз Два Три Четыре Пять
-Скажем без подвоха
-Раз Два Три Четыре Пять
-Жадность - это плохо"));
 
-print_r(wordsCount("Кот кот кОт оЛень"));
+// print_r(wordsCount("Раз Два Три Четыре Пять
+// Скажем без подвоха
+// Раз Два Три Четыре Пять
+// Жадность - это плохо"));
 
-print_r(wordsCount("Первый, второй. Первый-второй. Третий1"));
+// print_r(wordsCount("Кот кот кОт оЛень"));
+
+// print_r(wordsCount("Первый, второй. Первый-второй. Третий1"));
