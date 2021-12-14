@@ -43,7 +43,7 @@ function get_1($dbh, string $s_name)
     $sth->bindParam(':s_name', $s_name);
 
     $sth->execute();
-    $res = $sth->fetchAll();
+    $res = $sth->fetchAll(PDO::FETCH_ASSOC);
     $j = json_encode($res, JSON_UNESCAPED_UNICODE);
     print_r($j);
 
