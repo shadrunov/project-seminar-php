@@ -8,7 +8,7 @@ services:
     #   - .env
     environment:
       MARIADB_ROOT_PASSWORD: linux
-      MARIADB_DATABASE: lms
+      MARIADB_DATABASE: prof202
       MARIADB_USER: alex
       MARIADB_PASSWORD: docker
     ports:
