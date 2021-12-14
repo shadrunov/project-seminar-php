@@ -8,15 +8,15 @@ try {
 
 
 
-    $query = "SELECT students.lastname, students.firstname, `groups`.grnum, s.speciality_name, `groups`.year_start FROM students left join `groups` on students.grid=groups.grid left join specialities s on `groups`.speciality_id = s.speciality_id where s.speciality_name like 'ИБ' order by lastname asc;";
+    // $query = "SELECT students.lastname, students.firstname, `groups`.grnum, s.speciality_name, `groups`.year_start FROM students left join `groups` on students.grid=groups.grid left join specialities s on `groups`.speciality_id = s.speciality_id where s.speciality_name like 'ИБ' order by lastname asc;";
 
-    $sth = $dbh->prepare($query);
+    // $sth = $dbh->prepare($query);
 
     // $sth->bindParam(':s_name', $s_name);
 
-    $res = $sth->execute();
+    // $res = $sth->execute();
     // $arrayRes = $res->fetchAll();
-    echo($res);
+    // echo($res);
 
 
     } catch (PDOException $e) {
@@ -28,34 +28,25 @@ try {
 function get_1($dbh, string $s_name)
 {
     
-    // $query = "SELECT students.lastname,
-    //                  students.firstname,
-    //                  `groups`.grnum,
-    //                  s.speciality_name,
-    //                  `groups`.year_start
-    // FROM students left join `groups` on students.grid=groups.grid
-    // left join specialities s on `groups`.speciality_id = s.speciality_id
-    // where s.speciality_name like :s_name
-    // order by lastname asc;";
     $query = "SELECT students.lastname,
-    students.firstname,
-    `groups`.grnum,
-    s.speciality_name,
-    `groups`.year_start
-FROM students left join `groups` on students.grid=groups.grid
-left join specialities s on `groups`.speciality_id = s.speciality_id
-where s.speciality_name like 'ИБ'
-order by lastname asc;";
+                     students.firstname,
+                     `groups`.grnum,
+                     s.speciality_name,
+                     `groups`.year_start
+    FROM students left join `groups` on students.grid=groups.grid
+    left join specialities s on `groups`.speciality_id = s.speciality_id
+    where s.speciality_name like :s_name
+    order by lastname asc limit 10;";
 
     $sth = $dbh->prepare($query);
 
-    // $sth->bindParam(':s_name', $s_name);
+    $sth->bindParam(':s_name', $s_name);
 
-    $res = $sth->execute();
-    // $arrayRes = $res->fetchAll();
-    echo($res);
+    $sth->execute();
+    $res = $sth->fetchAll();
+    $j = json_encode($res, JSON_UNESCAPED_UNICODE);
+    print_r($j);
 
-    echo 'thats all';
 }
 
 
@@ -65,9 +56,9 @@ if ( $_SERVER['REQUEST_METHOD'] === 'GET' )
     {
         // print_r($_GET);
         // print_r( gettype($_GET['speciality_name']) );
-        echo "<p> requested page 1 </p>";
+        // echo "<p> requested page 1 </p>";
         get_1($dbh, $_GET['speciality_name']);
-        echo 'done';
+        // echo 'done';
     }
 }
 
