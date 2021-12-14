@@ -16,3 +16,4 @@ ALTER TABLE groups
 ```  
 
 ## создание API
+![image](https://user-images.githubusercontent.com/44522467/145993229-1c4b7dd7-579f-494b-9862-9893a5aaa222.png)
