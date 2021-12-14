@@ -16,7 +16,7 @@ ALTER TABLE groups
 ```  
 
 ## создание API
-скриншоты ниже показывают работу GET запроса из браузера.  
+### скриншоты ниже показывают работу GET запроса из браузера.  
 <details><summary>скриншоты</summary>
 ![image](https://user-images.githubusercontent.com/44522467/145993229-1c4b7dd7-579f-494b-9862-9893a5aaa222.png)
 ![image](https://user-images.githubusercontent.com/44522467/146040823-b401de9b-2048-40db-b65f-c9860fb2d48e.png)
@@ -25,7 +25,7 @@ ALTER TABLE groups
 ![image](https://user-images.githubusercontent.com/44522467/146041090-559e8e0b-350d-4c1a-9202-1c7000ef690a.png)
 </details>
 
-скриншоты ниже показывают работу POST запроса (для моделирования отправки формы используется библиотека [requests](https://docs.python-requests.org/en/latest/)).  
+### скриншоты ниже показывают работу POST запроса (для моделирования отправки формы используется библиотека [requests](https://docs.python-requests.org/en/latest/)).  
 <details><summary>скриншоты</summary>
 неверная фамилия:  
 <br>
