@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  mariadb:
+    container_name: mariadb
+    image: mariadb
+    # env_file:
+    #   - .env
+    environment:
+      MARIADB_ROOT_PASSWORD: linux
+      MARIADB_DATABASE: arch
+      MARIADB_USER: alex
+      MARIADB_PASSWORD: docker
+    ports:
+      - 3307:3306
+    volumes:
+      - ./data:/var/lib/mysql
