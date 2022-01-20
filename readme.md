@@ -1,4 +1,22 @@
 # отчёт 5.1 Приложение с базой данных
+Шадрунов Алексей, БИБ202
+
+# содержание:
+
+* [Работа API](#Работа-API)
+    * [listitems.php](#listitemsphp)
+    * [listitems2.php](#listitems2php)
+    * [getitem.php](#getitemphp)
+    * [additem.php](#additemphp)
+    * [additem2.php](#additem2php)
+    * [addlink.php](#addlinkphp)
+    * [edititem.php](#edititemphp)
+    * [edititem2.php](#edititem2php)
+    * [deleteitem.php](#deleteitemphp)
+* [Обработка ошибок](#обработка-ошибок)
+* [Работа с БД](#работа-с-бд)
+
+# Работа API
 
 ## listitems.php 
 ```
@@ -43,7 +61,7 @@ body = {
 изменения в базе данных:  
 ![additem-db](https://user-images.githubusercontent.com/44522467/150414049-912c0504-d44b-4afc-a4a6-378619509d71.png)
 
-производится **валидация параметров**:   
+### производится **валидация параметров**:   
 - если не все параметры заданы:  
 ![additem-err1](https://user-images.githubusercontent.com/44522467/150414358-1eebbf8d-886f-43e4-9b06-7eeb6cbff676.png)
 - если в справочниках не существует указанных `hometown` или `department`:  
@@ -65,7 +83,7 @@ body = {
 изменения в базе данных:   
 ![additem2-db](https://user-images.githubusercontent.com/44522467/150415074-52ae38dd-8652-426c-9ea4-825360b416a8.png)
 
-производится **валидация параметров** аналогично предыдущему пункту:  
+### производится **валидация параметров** аналогично предыдущему пункту:  
 - если не все параметры заданы  
 - если в справочниках не существует указанного `department`  
 
@@ -84,7 +102,7 @@ body = {
 изменения в базе данных:   
 ![addlink-db](https://user-images.githubusercontent.com/44522467/150415588-91d29aac-29af-48fe-af5c-c3c0baa267af.png)
 
-производится **валидация параметров**:  
+### производится **валидация параметров**:  
 - если не все параметры заданы:  
 ![image](https://user-images.githubusercontent.com/44522467/150417596-38bff46e-9e1a-4026-89f0-9431cc8c579e.png)
 - если в таблицах не существует указанных записей:  
@@ -109,7 +127,7 @@ body = {
 изменения в базе данных:   
 ![image](https://user-images.githubusercontent.com/44522467/150417969-4b1cece4-979f-47f7-9bc9-f86092ad24e1.png)  
 
-производится **валидация параметров**:  
+### производится **валидация параметров**:  
 - если ни одно поле не задано:  
 ![image](https://user-images.githubusercontent.com/44522467/150418697-12b788aa-5942-4c97-bb28-d436f537649d.png)
 - если не указан ID:  
@@ -136,7 +154,7 @@ body = {
 изменения в базе данных:  
 ![image](https://user-images.githubusercontent.com/44522467/150419224-380d3cac-fc4f-4f41-9bd1-99dc255d0adc.png)
 
-производится **валидация параметров** аналогично предыдущему пункту:  
+### производится **валидация параметров** аналогично предыдущему пункту:  
 - если ни одно поле не задано  
 - если не указан ID  
 - если не существует `department`  
@@ -152,7 +170,7 @@ DELETE /deleteitem.php?ID={student_id}
 ![image](https://user-images.githubusercontent.com/44522467/150421718-0050c387-6b82-4b49-a0bb-d755319cabcc.png)
 
 
-производится **валидация параметров**:  
+### производится **валидация параметров**:  
 - если не указан ID:  
 ![image](https://user-images.githubusercontent.com/44522467/150422179-460ab90a-8cb2-48eb-a294-a7907983f6eb.png)
 - если существует связь в таблице М-М:  
