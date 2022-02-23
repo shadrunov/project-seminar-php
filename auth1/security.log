@@ -1,0 +1,37 @@
+Logout error: not authorised
+login: session started = mvsi9gi0195kvmuso3o0cclke8
+
+login: session regenerated = 5rp0ftmpt14or6mrlhqbrp9c9r
+
+Login: successful
+Logout: successful, session destroyed: 
+
+Logout error: not authorised
+login: session started = pba2umj8c7o4brm0j0vukbl78d
+
+login: session regenerated = 1tqrrbkvcglfa70cefa1um6b6p
+
+Login: successful
+login: session started = aurgbm9rs39p2dlsf5l06vppta
+
+login: session regenerated = 9m0793u9fp23qr4i9arubsv0c1
+
+Login: successful
+Logout: successful, session destroyed: 
+
+Login error: wrong password
+Logout error: not authorised
+Access error: attempt of unauthorised access
+Error: expected POST, not GET
+login: session started = evoq7jgo1l9nmqddl82q9knbsp
+
+login: session regenerated = n3qke91ga5rr0eiq7em9s0j285
+
+Login: successful
+Logout: successful, session destroyed: 
+
+Login error: wrong password
+Logout error: not authorised
+Access error: attempt of unauthorised access
+Error: expected POST, not GET
+Error: connection to DB failed: SQLSTATE[HY000] [2002] Connection refused
