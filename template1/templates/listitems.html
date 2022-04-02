@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>listitems</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+</head>
+
+<body style="margin:15px;padding:15px;line-height:30px;">
+
+    <header style="background-color: rgb(255, 255, 118);">
+        <a style="color: blue;" href="listitems.php">List items</a>
+        <a style="color: blue;" href="additem.php">Add item</a>
+        {% if username %}
+        <a style="color: blue;" href="logout.php">Logout</a>
+        Hello, {{username|e}}
+        {% else %}
+        <a style="color: blue;" href="login.php">Login</a>
+        {% endif %}
+    </header>
+
+    
+    <h1>list elements</h1>
+
+    <form method="get" autocomplete="on">
+        <fieldset>
+            <legend>Filter students:</legend>
+            <label for="student_name">Student name:</label><br>
+            <input type="text" id="student_name" name="student_name" value="{{old_params.student_name|e}}"><br>
+            <label for="hometown_name">Hometown:</label><br>
+            <select id="hometown_name" name="hometown_name">
+                <option value="">not selected</option>
+                {% for hometown in hometowns %}
+                <option value="{{ hometown|e }}" {% if old_params.hometown_name==hometown %} selected {% endif %}>
+                    {{ hometown|e }}</option>
+                {% endfor %}
+            </select><br>
+            <label for="department_name">Department:</label><br>
+            <select id="department_name" name="department_name">
+                <option value="">not selected</option>
+                {% for department in departments %}
+                <option value="{{ department|e }}" {% if old_params.department_name==department %} selected {% endif %}>{{
+                    department|e }}</option>
+                {% endfor %}
+            </select><br>
+
+            <label for="items_per_page">items_per_page:</label><br>
+            <input type="text" id="items_per_page" name="items_per_page" value="{{old_params.items_per_page|e}}"><br>
+            <label for="page_number">page_number:</label><br>
+            <input type="text" id="page_number" name="page_number" value="{{old_params.page_number|e}}"><br><br>
+
+
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+
+
+    {% if students|length > 0 %}
+    <table border="1">
+        <tr>
+            <td>Student name</td>
+            <td>Hometown</td>
+            <td>Department</td>
+            <td>View</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.student_name|e }}</td>
+            <td>{{ student.hometown_name|e }}</td>
+            <td>{{ student.department_name|e }}</td>
+            <td><a style="color: blue;" href="getitem.php?ID={{ student.id|e('url') }}">View</A></td>
+            <td><a style="color: blue;" href="edititem.php?ID={{ student.id|e('url') }}">Edit</A></td>
+            <td><a style="color: blue;" href="deleteitem.php?ID={{ student.id|e('url') }}">Delete</A></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    Nothing found!
+    {% endif %}
+
+
+</body>
+
+</html>

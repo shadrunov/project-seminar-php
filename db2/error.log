@@ -1,7 +1,0 @@
-Error: connection to DB failed: SQLSTATE[HY000] [2002] Connection refused
-Error: expected GET, not POST
-Error: can't edit, not all params recieved
-Error: invalid student id
-Error: can't add, not all params recieved
-Error: invalid department id
-Error: invalid hometown id

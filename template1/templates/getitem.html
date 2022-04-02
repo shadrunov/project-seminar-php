@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>getitem</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+</head>
+
+<body style="margin:15px;padding:15px;line-height:30px;">
+
+    <header style="background-color: rgb(255, 255, 118);">
+        <a style="color: blue;" href="listitems.php">List items</a>
+        {% if username %}
+        <a style="color: blue;" href="logout.php">Logout</a>
+        Hello, {{username|e}}
+        {% else %}
+        <a style="color: blue;" href="login.php">Login</a>
+        {% endif %}
+    </header>
+
+    
+    <h1>get item</h1>
+
+    {% if student|length > 0 %}
+    <table border="1">
+        <tr>
+            <td>Student name</td>
+            <td>{{ student.student_name|e }}</td>
+        </tr>
+        <tr>
+            <td>Hometown</td>
+            <td>{{ student.hometown_name|e }}</td>
+        </tr>
+        <tr>
+            <td>Department</td>
+            <td>{{ student.department_name|e }}</td>
+        </tr>
+        <tr>
+            <td>Courses</td>
+            <td>
+            {% for course in courses %}
+                {{ course|e }} <br>
+            {% endfor %}
+            </td>
+        </tr>
+        <tr>
+            <td>Edit</td>
+            <td><a style="color: blue;" href="edititem.php?ID={{ student.id|e('url') }}">Edit</a></td>
+        </tr>
+        <tr>
+            <td>Delete</td>
+            <td><a style="color: blue;" href="deleteitem.php?ID={{ student.id|e('url') }}">Delete</A></td>
+        </tr>
+    </table>
+    {% else %}
+    Nothing found!
+    {% endif %}
+
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+116 new hometown id: 1 student_id 63
+135 new department id: 1 student_id 63
+values to insert before: newname 3 2 63
+values to insert after: newname 1 2 63
+116 new hometown id: 1 student_id 63
+135 new department id: 1 student_id 63
+values to insert before: newname 1 2 63
+values to insert after: newname 1 1 63
+116 new hometown id: 5 student_id 63
+135 new department id: 3 student_id 63
+values to insert before: newname 1 1 63
+values to insert after: newname 5 3 63
+116 new hometown id: 5 student_id 63
+116 new hometown id: 5 student_id 63
+135 new department id: 2 student_id 63
+values to insert before: newname 5 3 63
+values to insert after: newname 5 2 63
+Error: link exists, can't delete
+Error: can't add, not all params recieved
+Error: can't add, not all params recieved
+Error: expected GET, not POST
+Error: expected GET, not POST
+Error: can't edit, not all params recieved
+Error: can't edit, not all params recieved
+Error: can't edit, not all params recieved
+Error: can't edit, not all params recieved
+Error: expected GET, not POST
+Error: expected POST, not DELETE
+Error: can't delete, not all params recieved
+Error: expected GET, not POST
+Error: link exists, can't delete
+Error: link exists, can't delete
+Error: expected GET, not POST
+Error: invalid student id

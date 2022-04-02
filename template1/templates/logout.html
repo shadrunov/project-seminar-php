@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>logout</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+</head>
+
+<body style="margin:15px;padding:15px;line-height:30px;">
+
+    <header style="background-color: rgb(255, 255, 118);">
+        <a style="color: blue;" href="listitems.php">List items</a>
+        {% if username %}
+        <a style="color: blue;" href="logout.php">Logout</a>
+        Hello, {{username|e}}
+        {% else %}
+        <a style="color: blue;" href="login.php">Login</a>
+        {% endif %}
+    </header>
+
+    
+    <h1>logout</h1>
+
+    <form method="post" autocomplete="on">
+        <fieldset>
+            <legend>Logout:</legend>
+            <input type="submit" value="Logout">
+        </fieldset>
+    </form>
+
+    {% if error %}
+    <h1 style="color:red;">{{error|e}}</h1>
+    {% endif %}
+
+</body>
+
+</html>
