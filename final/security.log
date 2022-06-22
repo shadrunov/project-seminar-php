@@ -1,0 +1,44 @@
+LOG type(5) [22.06.2022 20:06:00]: login: session started = 2c4j7n914fg579oppsk7q6nhvl
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 75
+LOG type(5) [22.06.2022 20:06:00]: login: session regenerated = q5tbm22j535o11m6rssnobua27
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 77
+LOG type(5) [22.06.2022 20:06:00]: Login: successful at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 82
+LOG type(5) [22.06.2022 21:06:21]: Logout: successful, session destroyed: security at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LogoutClass.php line 48
+LOG type(5) [22.06.2022 21:06:24]: Access error: attempt of unauthorised access at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/ItemClass.php line 21
+LOG type(5) [22.06.2022 21:06:24]: login: session started = fooafqa2kal74aktq1et7r1095
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 71
+LOG type(5) [22.06.2022 21:06:24]: login: session regenerated = mhjnrpv3n4qqg9polck1h80nei
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 73
+LOG type(5) [22.06.2022 21:06:24]: Login: successful at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 78
+LOG type(5) [22.06.2022 21:06:14]: login: session started = mqv2m6i4silp1o22ojshd27iot
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 71
+LOG type(5) [22.06.2022 21:06:14]: login: session regenerated = uf2k95s1e4p0stg78dcl45p0nb
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 73
+LOG type(5) [22.06.2022 21:06:14]: Login: successful at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 78
+LOG type(5) [22.06.2022 21:06:47]: Logout: successful, session destroyed: security at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LogoutClass.php line 48
+LOG type(5) [22.06.2022 21:06:51]: login: session started = uf2k95s1e4p0stg78dcl45p0nb
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 71
+LOG type(5) [22.06.2022 21:06:51]: login: session regenerated = psrkdagc1ui35597bdr6jasm3r
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 73
+LOG type(5) [22.06.2022 21:06:51]: Login: successful at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 78
+LOG type(5) [22.06.2022 21:06:08]: login: session started = b7nju2slfk6lbhjsmrklcebboi
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 71
+LOG type(5) [22.06.2022 21:06:08]: login: session regenerated = cli92ah50an2257qdprvii0boc
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 73
+LOG type(5) [22.06.2022 21:06:08]: Login: successful at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 78
+LOG type(5) [22.06.2022 21:06:29]: Logout: successful, session destroyed: security at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LogoutClass.php line 48
+LOG type(5) [22.06.2022 21:06:05]: Logout: successful, session destroyed: security at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LogoutClass.php line 48
+LOG type(5) [22.06.2022 21:06:22]: Login error: malformed request at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 36
+LOG type(5) [22.06.2022 21:06:35]: Login error: malformed request at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 36
+LOG type(5) [22.06.2022 21:06:05]: Access error: attempt of unauthorised access at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/ItemClass.php line 21
+LOG type(5) [22.06.2022 21:06:13]: login: session started = 2o82c10djf8orrs0b1chvpie6s
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 71
+LOG type(5) [22.06.2022 21:06:13]: login: session regenerated = smu6ageks0eqda5038b7qi4iej
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 73
+LOG type(5) [22.06.2022 21:06:13]: Login: successful at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 78
+LOG type(5) [22.06.2022 21:06:51]: Access error: attempt of unauthorised access at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/ItemClass.php line 21
+LOG type(5) [22.06.2022 21:06:53]: login: session started = cgtubl644vhg33bbg9g5kmnq3c
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 71
+LOG type(5) [22.06.2022 21:06:53]: login: session regenerated = pemsd9sfs7hrn7vir586ei05t5
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 73
+LOG type(5) [22.06.2022 21:06:53]: Login: successful at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 78

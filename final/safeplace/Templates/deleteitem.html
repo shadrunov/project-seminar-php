@@ -14,12 +14,12 @@
 <body style="margin:15px;padding:15px;line-height:30px;">
 
     <header style="background-color: rgb(255, 255, 118);">
-        <a style="color: blue;" href="listitems.php">List items</a>
+        <a style="color: blue;" href="index.php?page=item">List items</a>
         {% if username %}
-        <a style="color: blue;" href="logout.php">Logout</a>
+        <a style="color: blue;" href="index.php?page=logout">Logout</a>
         Hello, {{username|e}}
         {% else %}
-        <a style="color: blue;" href="login.php">Login</a>
+        <a style="color: blue;" href="index.php?page=login">Login</a>
         {% endif %}
     </header>
 
@@ -31,7 +31,7 @@
         <input type="hidden" id="ID" name="ID" value={{student.student_id|e}}>
         <input type="submit" value="Yes">
     </form>
-    <form style="display: inline;" action="getitem.php">
+    <form style="display: inline;" action="index.php?page=item&ID={{student.student_id|e}}">
         <input type="submit" value="No" />
         <input type="hidden" id="ID" name="ID" value={{student.student_id|e}}>
     </form>

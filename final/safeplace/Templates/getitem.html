@@ -14,12 +14,12 @@
 <body style="margin:15px;padding:15px;line-height:30px;">
 
     <header style="background-color: rgb(255, 255, 118);">
-        <a style="color: blue;" href="listitems.php">List items</a>
+        <a style="color: blue;" href="index.php?page=item">List items</a>
         {% if username %}
-        <a style="color: blue;" href="logout.php">Logout</a>
+        <a style="color: blue;" href="index.php?page=logout">Logout</a>
         Hello, {{username|e}}
         {% else %}
-        <a style="color: blue;" href="login.php">Login</a>
+        <a style="color: blue;" href="index.php?page=login">Login</a>
         {% endif %}
     </header>
 
@@ -50,11 +50,11 @@
         </tr>
         <tr>
             <td>Edit</td>
-            <td><a style="color: blue;" href="edititem.php?ID={{ student.id|e('url') }}">Edit</a></td>
+            <td><a style="color: blue;" href="index.php?page=item&action=edit&ID={{ student.id|e('url') }}">Edit</a></td>
         </tr>
         <tr>
             <td>Delete</td>
-            <td><a style="color: blue;" href="deleteitem.php?ID={{ student.id|e('url') }}">Delete</A></td>
+            <td><a style="color: blue;" href="index.php?page=item&action=delete&ID={{ student.id|e('url') }}">Delete</A></td>
         </tr>
     </table>
     {% else %}

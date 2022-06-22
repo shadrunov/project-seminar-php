@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>listitems</title>
+    <title>edititem</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -14,22 +14,21 @@
 <body style="margin:15px;padding:15px;line-height:30px;">
 
     <header style="background-color: rgb(255, 255, 118);">
-        <a style="color: blue;" href="listitems.php">List items</a>
-        <a style="color: blue;" href="additem.php">Add item</a>
+        <a style="color: blue;" href="index.php?page=item">List items</a>
         {% if username %}
-        <a style="color: blue;" href="logout.php">Logout</a>
+        <a style="color: blue;" href="index.php?page=logout">Logout</a>
         Hello, {{username|e}}
         {% else %}
-        <a style="color: blue;" href="login.php">Login</a>
+        <a style="color: blue;" href="index.php?page=login">Login</a>
         {% endif %}
     </header>
 
     
-    <h1>list elements</h1>
+    <h1>edit item</h1>
 
-    <form method="get" autocomplete="on">
+    <form method="post" autocomplete="on">
         <fieldset>
-            <legend>Filter students:</legend>
+            <legend>Edit student:</legend>
             <label for="student_name">Student name:</label><br>
             <input type="text" id="student_name" name="student_name" value="{{old_params.student_name|e}}"><br>
             <label for="hometown_name">Hometown:</label><br>
@@ -48,44 +47,14 @@
                     department|e }}</option>
                 {% endfor %}
             </select><br>
-
-            <label for="items_per_page">items_per_page:</label><br>
-            <input type="text" id="items_per_page" name="items_per_page" value="{{old_params.items_per_page|e}}"><br>
-            <label for="page_number">page_number:</label><br>
-            <input type="text" id="page_number" name="page_number" value="{{old_params.page_number|e}}"><br><br>
-
-
             <input type="submit" value="Submit">
+            <input type="hidden" id="student_id" name="student_id" value={{old_params.student_id|e}}>
         </fieldset>
     </form>
 
-
-
-    {% if students|length > 0 %}
-    <table border="1">
-        <tr>
-            <td>Student name</td>
-            <td>Hometown</td>
-            <td>Department</td>
-            <td>View</td>
-            <td>Edit</td>
-            <td>Delete</td>
-        </tr>
-        {% for student in students %}
-        <tr>
-            <td>{{ student.student_name|e }}</td>
-            <td>{{ student.hometown_name|e }}</td>
-            <td>{{ student.department_name|e }}</td>
-            <td><a style="color: blue;" href="getitem.php?ID={{ student.id|e('url') }}">View</A></td>
-            <td><a style="color: blue;" href="edititem.php?ID={{ student.id|e('url') }}">Edit</A></td>
-            <td><a style="color: blue;" href="deleteitem.php?ID={{ student.id|e('url') }}">Delete</A></td>
-        </tr>
-        {% endfor %}
-    </table>
-    {% else %}
-    Nothing found!
+    {% if error %}
+    <h1 style="color:red;">{{error|e}}</h1>
     {% endif %}
-
 
 </body>
 
