@@ -4733,3 +4733,324 @@ LOG type(5) [22.06.2022 21:06:33]: params: array (
   ':student_id' => '76',
 ) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
 LOG type(5) [22.06.2022 21:06:33]: Error: link exists, can't delete at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/ItemClass.php line 397
+LOG type(5) [23.06.2022 12:06:20]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:20]: curpage: default at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:20]: query: select distinct name from hometowns; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:20]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:20]: query: select distinct name from departments; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:20]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:23]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:23]: curpage: default at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:23]: query: select distinct name from hometowns; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:23]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:23]: query: select distinct name from departments; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:23]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:06]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:06]: curpage: default at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:06]: query: select distinct name from hometowns; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:06]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:06]: query: select distinct name from departments; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:06]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:22]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:22]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:22]: query: SELECT s.id,
+                s.name       as student_name,
+                s.hometown   as hometown_id,
+                h.name       as hometown_name,
+                s.department as department_id,
+                d.name       as department_name
+        from students s
+                left join hometowns h on s.hometown = h.id
+                left join departments d on s.department = d.id
+        where s.id = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:22]: params: array (
+  ':student_id' => '214',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:22]: query: SELECT c.name as course_name
+        from courses_students cs
+        left join courses c on cs.course = c.id
+        where cs.student = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:22]: params: array (
+  ':student_id' => '214',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:24]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:24]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:24]: query: SELECT s.id as student_id,
+            s.name       as student_name,
+            s.hometown   as hometown_id,
+            h.name       as hometown_name,
+            s.department as department_id,
+            d.name       as department_name
+            from students s
+                    left join hometowns h on s.hometown = h.id
+                    left join departments d on s.department = d.id
+            where s.id = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:24]: params: array (
+  ':student_id' => '214',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:24]: query: select distinct name from hometowns; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:24]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:24]: query: select distinct name from departments; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:24]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:26]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:26]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:26]: query: SELECT id from hometowns where name = :hometown; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:26]: params: array (
+  ':hometown' => 'Saint Petersburg',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:26]: query: SELECT id from departments where name = :department; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:26]: params: array (
+  ':department' => 'ДКИ',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:26]: query: SELECT name, hometown, department from students where id = :id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:26]: params: array (
+  ':id' => '214',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:26]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:26]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:26]: query: SELECT s.id,
+                s.name       as student_name,
+                s.hometown   as hometown_id,
+                h.name       as hometown_name,
+                s.department as department_id,
+                d.name       as department_name
+        from students s
+                left join hometowns h on s.hometown = h.id
+                left join departments d on s.department = d.id
+        where s.id = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:26]: params: array (
+  ':student_id' => '214',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:26]: query: SELECT c.name as course_name
+        from courses_students cs
+        left join courses c on cs.course = c.id
+        where cs.student = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:26]: params: array (
+  ':student_id' => '214',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:39]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:39]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:39]: query: SELECT s.id as student_id,
+            s.name       as student_name,
+            s.hometown   as hometown_id,
+            h.name       as hometown_name,
+            s.department as department_id,
+            d.name       as department_name
+            from students s
+                    left join hometowns h on s.hometown = h.id
+                    left join departments d on s.department = d.id
+            where s.id = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:39]: params: array (
+  ':student_id' => '214',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:39]: query: select distinct name from hometowns; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:39]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:39]: query: select distinct name from departments; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:39]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:00]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:00]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:00]: query: SELECT s.id,
+                s.name       as student_name,
+                s.hometown   as hometown_id,
+                h.name       as hometown_name,
+                s.department as department_id,
+                d.name       as department_name
+        from students s
+                left join hometowns h on s.hometown = h.id
+                left join departments d on s.department = d.id
+        where s.id = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:00]: params: array (
+  ':student_id' => '214',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:00]: query: SELECT c.name as course_name
+        from courses_students cs
+        left join courses c on cs.course = c.id
+        where cs.student = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:00]: params: array (
+  ':student_id' => '214',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:02]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:02]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:02]: query: select distinct name from hometowns; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:02]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:02]: query: select distinct name from departments; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:02]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:05]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:05]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:05]: query: select distinct name from hometowns; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:05]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:05]: query: select distinct name from departments; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:05]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:10]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:10]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:10]: query: SELECT id from hometowns where name = :hometown; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:10]: params: array (
+  ':hometown' => 'Taganrog',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:10]: query: SELECT id from departments where name = :department; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:10]: params: array (
+  ':department' => 'ДЭИ',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:10]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:10]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:10]: query: SELECT s.id,
+                s.name       as student_name,
+                s.hometown   as hometown_id,
+                h.name       as hometown_name,
+                s.department as department_id,
+                d.name       as department_name
+        from students s
+                left join hometowns h on s.hometown = h.id
+                left join departments d on s.department = d.id
+        where s.id = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:10]: params: array (
+  ':student_id' => '868',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:10]: query: SELECT c.name as course_name
+        from courses_students cs
+        left join courses c on cs.course = c.id
+        where cs.student = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:10]: params: array (
+  ':student_id' => '868',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:14]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:14]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:14]: query: SELECT id as student_id from students where id = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:14]: params: array (
+  ':student_id' => '868',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:24]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:24]: curpage: default at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:24]: query: SELECT s.id,
+                s.name       as student_name,
+                s.hometown   as hometown_id,
+                h.name       as hometown_name,
+                s.department as department_id,
+                d.name       as department_name
+        from students s
+                left join hometowns h on s.hometown = h.id
+                left join departments d on s.department = d.id
+        where s.id = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:24]: params: array (
+  ':student_id' => '868',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:24]: query: SELECT c.name as course_name
+        from courses_students cs
+        left join courses c on cs.course = c.id
+        where cs.student = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:24]: params: array (
+  ':student_id' => '868',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:25]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:25]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:25]: query: SELECT id as student_id from students where id = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:25]: params: array (
+  ':student_id' => '868',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:26]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:26]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:26]: query: SELECT id from courses_students where student = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:26]: params: array (
+  ':student_id' => '868',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:26]: query: SELECT id from students where id = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:26]: params: array (
+  ':student_id' => '868',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:26]: query: DELETE 
+                from students 
+                where id = :student_id; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 12:06:26]: params: array (
+  ':student_id' => '868',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 12:06:26]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 12:06:26]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 12:06:26]: query: select distinct name from hometowns; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:26]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 12:06:26]: query: select distinct name from departments; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 12:06:26]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 13:06:45]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 13:06:45]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 13:06:45]: query: select distinct name from hometowns; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 13:06:45]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 13:06:45]: query: select distinct name from departments; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 13:06:45]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 13:06:49]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 13:06:49]: curpage: logout at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 13:06:50]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 13:06:50]: curpage: logout at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 13:06:54]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 13:06:54]: curpage: default at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 13:06:54]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 13:06:54]: curpage: login at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 13:06:58]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 13:06:58]: curpage: login at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 13:06:58]: query: SELECT pass_hash from users where username = :username; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 13:06:58]: params: array (
+  ':username' => 'admin',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 13:06:58]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 13:06:58]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 13:06:58]: query: select distinct name from hometowns; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 13:06:58]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 13:06:58]: query: select distinct name from departments; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 13:06:58]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 13:06:07]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 13:06:07]: curpage: login at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 13:06:13]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 13:06:13]: curpage: login at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 13:06:13]: query: SELECT pass_hash from users where username = :username; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 13:06:13]: params: array (
+  ':username' => 'admin',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 13:06:56]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 13:06:56]: curpage: login at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 13:06:56]: query: SELECT pass_hash from users where username = :username; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 25
+LOG type(5) [23.06.2022 13:06:56]: params: array (
+  ':username' => 'admin',
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 26
+LOG type(5) [23.06.2022 13:06:56]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 13:06:56]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 13:06:56]: query: select distinct name from hometowns; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 13:06:56]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 13:06:56]: query: select distinct name from departments; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 13:06:56]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 13:06:12]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 13:06:12]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 13:06:12]: query: select distinct name from hometowns; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 13:06:12]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 13:06:12]: query: select distinct name from departments; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 13:06:12]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 13:06:12]: Invalid escaping strategy "" (valid ones: html, js, url, css, html_attr). at /home/alex/Documents/phpp/final/safeplace/Templates/additem.html line 31
+LOG type(5) [23.06.2022 13:06:30]: Connected to DB! at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 35
+LOG type(5) [23.06.2022 13:06:30]: curpage: item at /home/alex/Documents/phpp/final/safeplace/myapp/EventHandler.php line 44
+LOG type(5) [23.06.2022 13:06:30]: query: select distinct name from hometowns; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 13:06:30]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37
+LOG type(5) [23.06.2022 13:06:30]: query: select distinct name from departments; at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 36
+LOG type(5) [23.06.2022 13:06:30]: params: array (
+) at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/DBClass.php line 37

@@ -42,3 +42,16 @@ LOG type(5) [22.06.2022 21:06:53]: login: session started = cgtubl644vhg33bbg9g5
 LOG type(5) [22.06.2022 21:06:53]: login: session regenerated = pemsd9sfs7hrn7vir586ei05t5
  at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 73
 LOG type(5) [22.06.2022 21:06:53]: Login: successful at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 78
+LOG type(5) [23.06.2022 13:06:50]: Logout: successful, session destroyed: security at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LogoutClass.php line 48
+LOG type(5) [23.06.2022 13:06:54]: Access error: attempt of unauthorised access at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/ItemClass.php line 21
+LOG type(5) [23.06.2022 13:06:58]: login: session started = 7j4grcrhbual8fjlioolud3gtf
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 71
+LOG type(5) [23.06.2022 13:06:58]: login: session regenerated = eg05teprjuhn044rk2knindsga
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 73
+LOG type(5) [23.06.2022 13:06:58]: Login: successful at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 78
+LOG type(5) [23.06.2022 13:06:13]: Login error: wrong password at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 58
+LOG type(5) [23.06.2022 13:06:56]: login: session started = eg05teprjuhn044rk2knindsga
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 71
+LOG type(5) [23.06.2022 13:06:56]: login: session regenerated = u28g3rbhc6pc0np1j3imc7kslp
+ at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 73
+LOG type(5) [23.06.2022 13:06:56]: Login: successful at /home/alex/Documents/phpp/final/safeplace/myapp/Controller/LoginClass.php line 78

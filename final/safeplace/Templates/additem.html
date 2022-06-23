@@ -28,7 +28,7 @@
         <fieldset>
             <legend>Add student:</legend>
             <label for="student_name">Student name:</label><br>
-            <input type="text" id="student_name" name="student_name" value="{{old_params.student_name|e}}"><br>
+            <input type="text" id="student_name" name="student_name" value="{{old_params.student_name|e('html_attr')}}"><br>
             <label for="hometown_name">Hometown:</label><br>
             <select id="hometown_name" name="hometown_name">
                 <option value="">not selected</option>
